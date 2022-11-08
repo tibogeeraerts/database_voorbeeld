@@ -8,10 +8,9 @@ SQLALCHEMY_DATABASE_URL = "sqlite:///./sqlitedb/sqlitedata.db"
 
 engine = create_engine(
     # add echo = True to see SQL queries in terminal
-    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}, echo=True
+    SQLALCHEMY_DATABASE_URL, echo=True, connect_args={"check_same_thread": False}
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
-

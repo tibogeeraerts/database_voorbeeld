@@ -8,4 +8,4 @@ services:
     - sqlite_databse_volume:/code/sqlitedb
 
 volumes:
-  sqlite_useritems_volume:
+  sqlite_database_volume:
